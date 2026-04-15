@@ -71,8 +71,8 @@ class: gradient-card active
 ::link-banner
 ---
 banner: https://assets.zhilu.cyou/cover3/blog-using-nuxt.jpg
-title: 博客进化：从 Hexo 到 Nuxt Content
-link: /2024/blog-using-nuxt
+title: 博客源码仓库与开发说明
+link: https://github.com/zlemoni/blog-v3
 ---
 ::
 
