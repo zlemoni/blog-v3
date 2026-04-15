@@ -1,0 +1,69 @@
+name: Deploy blog-v3 to zlemoni.github.io
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout source repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.33.0
+          run_install: false
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Generate static site
+        run: pnpm generate
+
+      - name: Checkout target Pages repo
+        uses: actions/checkout@v4
+        with:
+          repository: zlemoni/zlemoni.github.io
+          token: ${{ secrets.GH_PAT }}
+          path: deploy-repo
+          fetch-depth: 1
+
+      - name: Sync generated files
+        run: |
+          rsync -a --delete --exclude='.git/' .output/public/ deploy-repo/
+          touch deploy-repo/.nojekyll
+          rm -f deploy-repo/CNAME
+
+      - name: Commit and push if changed
+        working-directory: deploy-repo
+        run: |
+          git config user.name 'zlemoni'
+          git config user.email '80295940@qq.com'
+          if git diff --quiet && git diff --cached --quiet; then
+            echo 'No changes to deploy.'
+            exit 0
+          fi
+          git add -A
+          if git diff --cached --quiet; then
+            echo 'No staged changes.'
+            exit 0
+          fi
+          git commit -m 'Deploy from blog-v3 source'
+          git push origin main
