@@ -20,7 +20,7 @@ const basicConfig = {
 	language: 'zh-CN',
 	timeEstablished: '2019-07-19',
 	timeZone: 'Asia/Shanghai',
-	url: 'https://blog.zhilu.site/',
+	url: 'https://zlemoni.github.io/',
 	defaultCategory: '未分类',
 }
 

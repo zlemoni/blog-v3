@@ -33,7 +33,7 @@
 
 | 博客名称                                     | 作者          | 对应上游版本号 | 下游特色功能                                 |
 | -------------------------------------------- | ------------- | -------------- | -------------------------------------------- |
-| **[纸鹿摸鱼处](https://blog.zhilu.site/)**   | **L33Z22L11** | v3.7.0-alpha.3 | (我是上游)                                   |
+| **[纸鹿摸鱼处](https://zlemoni.github.io/)** | **L33Z22L11** | v3.7.0-alpha.3 | (我是上游)                                   |
 | [希乐博客](https://blog.xlenco.top/)         | Xlenco        | v3.4.8         | 最新评论                                     |
 | [月空人](https://www.weilog.me/)             | Whbbit1999    | v3.6.5         | 项目/博客/Snippets页                         |
 | [Mugzx's Blog](https://blog.mugzx.top/)      | Mugzx         | v3.6.4         | 设计风格统一                                 |
@@ -63,7 +63,7 @@
 
 ## 特性
 
-[主题特性](https://blog.zhilu.site/theme) · [组件示例](https://blog.zhilu.site/previews/example)
+[主题特性](https://zlemoni.github.io/theme) · [组件示例](https://zlemoni.github.io/previews/example)
 
 ## 目录结构
 

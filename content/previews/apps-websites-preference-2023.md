@@ -34,7 +34,7 @@ tags: [软件清单, 网站工具, 使用习惯]
 | Netlify            | 前端项目部署               | :badge[app.netlify.com]                  |
 | Internet Archive   | 互联网档案馆/网页时光机    | :badge[archive.org]                      |
 | 哔哩哔哩           | 视频内容平台               | :badge[bilibili.com]                     |
-| 纸鹿摸鱼处         | 个人博客                   | :badge[blog.zhilu.site]                  |
+| 纸鹿摸鱼处         | 个人博客                   | :badge[zlemoni.github.io]                |
 | CO导航             | 大学学习                   | :badge[cooo.site]                        |
 | 微软Copilot        | 微软AI大模型               | :badge[copilot.microsoft.com]            |
 | Cloudflare         | 云服务平台                 | :badge[dash.cloudflare.com]              |
